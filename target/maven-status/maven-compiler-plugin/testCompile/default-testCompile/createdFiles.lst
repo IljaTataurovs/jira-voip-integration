@@ -1,0 +1,4 @@
+com\example\jiravoip\VoipServiceTest.class
+com\example\jiravoip\AppConfigTest.class
+com\example\jiravoip\JiraIssueTest.class
+com\example\jiravoip\CallTest.class
