@@ -1,0 +1,41 @@
+# Java and Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.log
+
+# Maven wrapper
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.ipr
+*.iml
+out/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment and config
+.env
+application.properties
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+
+# Node modules (if frontend exists)
+node_modules/
