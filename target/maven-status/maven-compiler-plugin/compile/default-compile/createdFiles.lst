@@ -1,0 +1,6 @@
+com\example\jiravoip\AppConfig.class
+Main.class
+com\example\jiravoip\JiraIssue.class
+com\example\jiravoip\JiraService.class
+com\example\jiravoip\Call.class
+com\example\jiravoip\VoipService.class
