@@ -1,14 +1,17 @@
-# Use an official Java runtime as a parent image
 FROM eclipse-temurin:17-jdk-alpine
 
-# Set the working directory in the container
+RUN addgroup -S spring && adduser -S spring -G spring
+USER spring
+
 WORKDIR /app
 
-# Copy the packaged jar file into the container
-COPY target/jira-voip-integration-1.0-SNAPSHOT.jar app.jar
+COPY target/*.jar app.jar
 
-# Make port 8080 available to the world outside the container
+ENV JAVA_OPTS="-XX:MaxRAMPercentage=75.0"
+
 EXPOSE 8080
 
-# Run the jar file
-ENTRYPOINT ["java", "-jar", "app.jar"]
+HEALTHCHECK --interval=30s --timeout=3s \
+  CMD wget --quiet --tries=1 --spider http://localhost:8080/actuator/health || exit 1
+
+ENTRYPOINT ["sh", "-c", "java ${JAVA_OPTS} -jar app.jar"]

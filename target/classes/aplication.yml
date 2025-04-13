@@ -1,0 +1,10 @@
+server:
+  port: 80
+  servlet:
+    context-path: /
+
+jira:
+  url: ${JIRA_URL:https://your-company.atlassian.net}
+  username: ${JIRA_USERNAME}
+  apiToken: ${JIRA_API_TOKEN}
+
